@@ -1,0 +1,44 @@
+\documentclass[UTF8]{article}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subfigure}
+\usepackage{amssymb}
+\usepackage{esvect}
+
+\begin{document}
+\section{Problem 1}
+Because $Tr(AB)=Tr(U^{-1}ABU)$, $Tr(e^{-\beta\mathcal{H}(h)}S^z_q)=-Tr(e^{-\beta\mathcal{H}(-h)}S^z_q)$. Where I use the transform which transforms $S^z_i\rightarrow -S^z_i,S^x_i\rightarrow -S^x_i$. As a result, it can be shown $\lim_{h\to 0^+}m_q(h)=-\lim_{h\to 0^-}m_q(h)$.
+
+\section{Problem 2}
+Acoording to Mashall's theorem, the ground state of Heisenberg model is not degenate. $[\mathcal{H}_0,P]=0$, where $P$ is the translation operator and $PS_i^zP^{-1}=S_{i+1}^z$. When $T=0K$, $<0|S_i^z|0>=<0|S_{i+1}^z|0>$ and $<0|\sum_{i}S_i^z|0>=0$. So $m_q(h=0)==0$ by deducing.
+
+\section{Problem 3}
+\begin{equation}
+\label{1}
+<\vec{S}_q\cdot \vec{S}_{-q}>=\sum_{n}\rho_n<n|\vec{S}_q\vec{S}_{-q}|n>
+\end{equation}
+\begin{equation}
+\label{2}
+N^2|m_q|^2=|\sum_{n}\rho_n<n|\vec{S}_q|n>|^2
+\end{equation}
+Because $0\le\rho_n<1$, the following equation could come out.
+\begin{equation}
+\sum_{n}\rho_n<n|\vec{S}_q|n>=\sum_{n}(\sqrt{\rho_n})(\sqrt{\rho_n}<n|\vec{S}_q|n>))=\sum_{n}a_nb_n,
+\end{equation}
+$(\sum_{n}a_nb_n)^2<=\sum_{n}a_n^2\sum_{n}b_n^2$, as a result:
+\begin{equation}
+\label{3}
+N^2|m_q|^2\le (\sum_{n}\rho_n)(\sum_{n}\rho_n|<n|\vec{S}_q|n>|^2)=\sum_{n}\rho_n|<n|\vec{S}_q|n>|^2
+\end{equation}
+At the same time,
+\begin{equation}
+\label{4}
+<\vec{S}_q\cdot \vec{S}_{-q}>=\sum_{n}\rho_n|<n|\vec{S}_q|n>|^2+\sum_{n,m\ne n}\rho_n|<n|\vec{S}_q|m>|^2\ge \sum_{n}\rho_n|<n|\vec{S}_q|n>|^2
+\end{equation}
+Finally, we get $<\vec{S}_q\cdot \vec{S}_{-q}>\ge N^2|m_q|^2$. 
+
+\section{Problem 4}
+It's a mathmatical problem which can be described as below. For a sequence $\{a_n\}$, if $\lim_{n\to \inf}a_n=0$ and $0\le a_n<L$ where $L$ is an positive const number. Then whether the sequence $\{\frac{1}{n}S_n\}$ converges where $S_n=\sum_{n}a_n$. The answer is yes. For $\forall \delta>0$, exists an $N$, when $n>N$, $a_n<\delta$. $S_N$ is finite, here exists an $M>N$ satisfying when $m>M,\frac{S_N}{m}<\delta$. So $\frac{S_m}{m}=\frac{S_N}{m}+\frac{\sum_{n=N+1}^{m}a_n<m \delta}{m}<2\delta$. So sequence $ \{\frac{1}{n}S_n\}$ converges to 0.
+
+\end{document}
